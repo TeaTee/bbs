@@ -18,6 +18,12 @@ if(isset($_GET['logout'])) {
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+    <div class="top-wrapper">
+			<div class="container">
+				<a href="index.php">掲示板</a>
+				<div class="clear"></div>
+			</div>
+		</div>
 		<div class="col-xs-6 col-xs-offset-3">
 			<form class="" action="index.html" method="post">
 				<h1>本当にログアウトしますか？</h1>
