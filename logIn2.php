@@ -1,7 +1,7 @@
 <?php
 ob_start();	//記録開始
 session_start();	//セッション開始
-if(isset($_SESSION['user']) != "") {
+if( isset($_SESSION['user']) != "") {
 	header("Location: index.php");
 	exit();
 }
@@ -47,13 +47,7 @@ if(isset($_POST['login'])){
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div class="top-wrapper">
-			<div class="container">
-					<a href="index.php">掲示板</a>
-					<a href="signUp.php">新規登録</a>
-					<div class="clear"></div>
-			</div>
-		</div>
+		<div id="header-wrapper"></div>
 		<div class="main-wrapper">
 			<div class="container">
 				<form method="post" id ="login_form">

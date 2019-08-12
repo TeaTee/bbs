@@ -90,10 +90,11 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_POST['message']))){
 	<body>
 		<div class="top-wrapper">
 			<?php if(!isset($_SESSION['user'])): ?>
-				<a href="signUp.php">新規登録</a>する
+				<a href="signUp.php">新規登録</a>
 			<?php else: ?>
-				<a href="logOut.php">ログアウト</a>する
+				<a href="logOut.php">ログアウト</a>
 			<?php endif; ?>
+			<div class="clear"></div>
 		</div>
 		<div class="post-wrapper">
 			<div class="container">

@@ -46,7 +46,13 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div id="header-wrapper"></div>
+		<div class="top-wrapper">
+			<div class="container">
+				<a href="index.php">掲示板</a>
+				<a href="logIn.php">ログイン</a>
+				<div class="clear"></div>
+			</div>
+		</div>
 		<div class="main-wrapper">
 			<div class="container">
 				<form method="post" id="signup_form">

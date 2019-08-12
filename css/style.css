@@ -17,7 +17,7 @@ li {
 
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -90,4 +90,28 @@ form {
 }
 .pos img, .com img {
   width: 50%;
+}
+.top-wrapper {
+  margin: 0 auto;
+  background-color:rgb(30, 144, 255);
+  width: 100%;
+}
+.top-wrapper a {
+  display: inline-block;
+  padding: 10px 20px;
+  line-height: 65px;
+  color: white;
+  font-weight: bold;
+}
+
+.top-wrapper a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  line-height: 65px;
+}
+
+.top-wrapper a:first-of-type {
+  float:left;
+}
+.top-wrapper a:last-of-type {
+  float:right;
 }
