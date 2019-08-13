@@ -32,7 +32,7 @@ function printPost($arr1, $arr2){
 
 // コメント表示用関数
 //$resに文字列としてhtmlタグを保存して、'comment_display.php'でjson形式に変換して返す
-function printP(&$posts, &$ids, &$res){
+function printP($posts, $ids, &$res){
 	for($i = 0; $i < count($posts); $i++) {
 		$res .= "<div class='cos cos".$ids[$i]['post_id']."'>";
 		foreach($posts[$i] as $key => $value){

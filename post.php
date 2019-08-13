@@ -77,52 +77,5 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_POST['message']))){
 	// echo 'トークンをセットしました';
 }
 
-
+require_once 'view/post_view.php';
 ?>
-
-<!DOCTYPE HTML>
-<html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<title>掲示板</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<div class="top-wrapper">
-			<div class="container">
-				<a href="index.php">掲示板</a>
-				<?php if(!isset($_SESSION['user'])): ?>
-					<a href="signUp.php">新規登録</a>
-					<a href="logIn.php">ログイン</a>
-				<?php else: ?>
-					<a href="logOut.php">ログアウト</a>
-				<?php endif; ?>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<div class="post-wrapper">
-			<div class="container">
-				<form method="post" id="post_form" enctype="multipart/form-data">
-					<h1>投稿する</h1>
-					<div class="form-group">
-						<label for="message">投稿内容</label><br>
-						<textarea name="message" rows="5" cols="28" id="comment"></textarea>
-						<p class="error message" id="message1"></p>
-					</div>
-					<div class="form-group">
-						<label for="image">画像を投稿する</label><br>
-						<input name="imageFile" type="file" id="image"/>
-					</div>
-					<div class="form-group">
-						<input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
-						<input type="hidden" name="posted_at" value="<?php echo date('Y-m-d_H-i-s'); ?>">
-					</div>
-					<button type="submit" name="do_post" id="postButton">投稿する</button>
-				</form>
-			</div>
-		</div>
-		<a href="index.php">掲示板を見る</a>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="js/submit.js"></script>
-	</body>
-</html>

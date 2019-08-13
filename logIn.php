@@ -37,48 +37,6 @@ if(isset($_POST['login'])){
 	}
 
 }
-?>
 
-<!DOCTYPE html>
-<html lang="ja">
-	<head>
-		<meta charset="utf-8">
-		<title>ログインページ</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<div class="top-wrapper">
-			<div class="container">
-				<a href="index.php">掲示板</a>
-				<?php if(!isset($_SESSION['user'])): ?>
-					<a href="signUp.php">新規登録</a>
-					<a href="logIn.php">ログイン</a>
-				<?php else: ?>
-					<a href="logOut.php">ログアウト</a>
-				<?php endif; ?>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<div class="main-wrapper">
-			<div class="container">
-				<form method="post" id ="login_form">
-					<h1>ログインフォーム</h1>
-					<div class="form-group">
-						<label for="e-mail">メールアドレス</label>
-						<input type="text" name="eMail" id="e-mail">
-						<p class="error message1" id="message1"></p>
-					</div>
-					<div class="form-group">
-						<label for="password">パスワード</label>
-						<input type="password" name="Password" id="password">
-						<p class="error message2" id="message2"></p>
-					</div>
-					<button class="login" type="submit" name="login">ログイン</button>
-					<a href="signUp.php">新規登録はこちら</a>
-				</form>
-			</div>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="js/submit.js"></script>
-	</body>
-</html>
+require_once 'view/logIn_view.php';
+?>
