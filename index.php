@@ -17,13 +17,16 @@ if(isset($_GET['post_id'])){
 	  header("Location: index.php");
 		exit();
 	}
+	//deletePostsに削除したい投稿の投稿idを送る
 	deletePosts($_GET['post_id']);
 	header("Location: index.php");
 }
+//投稿内容に関する情報を格納
 $posts = array();
 $ids = array();
-
+//
 setArray($posts, $ids, 0);
 
+//表示用ファイルの読み込み
 require_once 'view/index_view.php'
 ?>
